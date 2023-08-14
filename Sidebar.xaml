@@ -1,0 +1,43 @@
+<UserControl x:Class="Sidebar.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             xmlns:local="clr-namespace:Sidebar"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="150">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Icons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Border Name="Border" Background="White">
+            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center" Orientation="Vertical" Margin="0,0,0,0">
+                <Grid Height="50" Name="Logo">
+
+                </Grid>
+                <Border Height="1" CornerRadius="1" Background="Black" />
+                <Grid Name="MenuButtons" Height="100">
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Margin="10" Height="30" Orientation="Horizontal" x:Name="Button1">
+                            <Image Source="{StaticResource ic_close}"></Image>
+                            <Label> Home</Label>
+                        </StackPanel>
+                        <StackPanel Margin="10" Height="30" Orientation="Horizontal" x:Name="Button2">
+                            <Image Source="{StaticResource ic_close}"></Image>
+                            <Label>Headset</Label>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+                <Border Height="1" CornerRadius="1" Background="Black" />
+                <Grid Height="100" Name="Footer">
+
+                </Grid>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>
